@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fr.wildcodeschool.checkpoint3firebase.MainActivity">
+
+    <Button
+        android:id="@+id/gotoRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_new" />
+
+    <Button
+        android:id="@+id/goto_studentlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View student list" />
+
+</LinearLayout>

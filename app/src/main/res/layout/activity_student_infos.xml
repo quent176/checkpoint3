@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="fr.wildcodeschool.checkpoint3firebase.StudentInfosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/studentinfos_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            tools:text="Firstname" />
+
+        <TextView
+            android:id="@+id/studentinfos_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Lastname" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/studentinfos_average_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="@string/average" />
+
+        <TextView
+            android:id="@+id/studentinfos_average_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/studentinfos_grade_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/fill_grade" />
+
+    <Button
+        android:id="@+id/studentinfos_add_grade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_grade" />
+</LinearLayout>

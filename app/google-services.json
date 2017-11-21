@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "83644229297",
+    "firebase_url": "https://checkpoint3-android.firebaseio.com",
+    "project_id": "checkpoint3-android",
+    "storage_bucket": "checkpoint3-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83644229297:android:3edfe355e0c7f20a",
+        "android_client_info": {
+          "package_name": "fr.wildcodeschool.checkpoint3firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83644229297-6e593tkfcrhe102bamtotm8d1okuf4ur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fr.wildcodeschool.checkpoint3firebase",
+            "certificate_hash": "d10c7908868ff2bf0e5630fd28c08cf67757a5fc"
+          }
+        },
+        {
+          "client_id": "83644229297-haudchg4v62m5d1rf5sqkm5879hcc82t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCONdLk-tZqPGojJkq_uIrjbWYACTTY0Jw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83644229297-haudchg4v62m5d1rf5sqkm5879hcc82t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
