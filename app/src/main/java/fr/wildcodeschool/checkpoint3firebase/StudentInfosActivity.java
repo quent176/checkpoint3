@@ -24,6 +24,7 @@ public class StudentInfosActivity extends AppCompatActivity {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mDatabaseReference;
     EditText mStudentInfosGradeValue;
+    StudentModel mStudentModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +45,10 @@ public class StudentInfosActivity extends AppCompatActivity {
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                StudentModel studentModel = dataSnapshot.getValue(StudentModel.class);
-                mStudentInfosFirstName.setText(studentModel.getFirstname());
-                mStudentInfosLastName.setText(studentModel.getLastname());
-                mStudentInfosAverageValue.setText(studentModel.getAverage());
+                mStudentModel = dataSnapshot.getValue(StudentModel.class);
+                mStudentInfosFirstName.setText(mStudentModel.getFirstname());
+                mStudentInfosLastName.setText(mStudentModel.getLastname());
+                mStudentInfosAverageValue.setText(mStudentModel.getAverage());
             }
 
             @Override
@@ -60,10 +61,11 @@ public class StudentInfosActivity extends AppCompatActivity {
         studentInfosAddGrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int moyenneFirebase = Integer.parseInt(mStudentInfosAverageValue.getText().toString());
-                int note = Integer.parseInt(mStudentInfosGradeValue.getText().toString());
-                int moyenneFinale = (moyenneFirebase + note) / 2;
+                Double moyenneFirebase = Double.parseDouble(mStudentModel.getAverage());
+                Double note = Double.parseDouble(mStudentInfosGradeValue.getText().toString());
+                Double moyenneFinale = (moyenneFirebase + note) / 2;
                 mDatabaseReference.child("average").setValue(String.valueOf(moyenneFinale));
+                // mDatabaseReference.child("average").setValue(mStudentInfosGradeValue.getText().toString());
             }
         });
 
