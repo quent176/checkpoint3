@@ -10,6 +10,12 @@ public class StudentModel {
     private String lastname;
     private String average;
 
+    public StudentModel(String firstname, String lastname, String average) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.average = average;
+    }
+
     public StudentModel() {
 
     }

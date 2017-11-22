@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Checkpoint3 Firebase</string>
-    <string name="firebase_user">bastienwcs</string>
+    <string name="firebase_user">quent176</string>
 
     <string name="firstname">Firstname</string>
     <string name="lastname">Lastname</string>
@@ -11,4 +11,5 @@
     <string name="add_grade">Ajouter une note</string>
     <string name="average">Moyenne :</string>
     <string name="fill_grade">Note</string>
+    <string name="add_student">Etudiant ajouté !</string>
 </resources>

@@ -19,25 +19,25 @@ import com.google.firebase.database.Query;
 public class StudentListActivity extends AppCompatActivity {
 
     FirebaseRecyclerAdapter sAdapter = null;
-    private ProgressDialog progress_dialog;
-    private ProgressDialog progressTemp;
+    private ProgressDialog mProgressDialog;
+    private ProgressDialog mProgressTemp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_list);
 
-        progress_dialog = new ProgressDialog(StudentListActivity.this);
-        progress_dialog.setCancelable(false);
-        progress_dialog.setMessage(getString(R.string.loading));
-        progress_dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progress_dialog.show();
+        mProgressDialog = new ProgressDialog(StudentListActivity.this);
+        mProgressDialog.setCancelable(false);
+        mProgressDialog.setMessage(getString(R.string.loading));
+        mProgressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mProgressDialog.show();
 
-        /*progressTemp = new ProgressDialog(StudentListActivity.this);
-        progressTemp.setCancelable(false);
-        progressTemp.setMessage("Loading");
-        progressTemp.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressTemp.show();*/
+        /*mProgressTemp = new ProgressDialog(StudentListActivity.this);
+        mProgressTemp.setCancelable(false);
+        mProgressTemp.setMessage("Loading");
+        mProgressTemp.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        mProgressTemp.show();*/
 
         Query query = FirebaseDatabase.getInstance()
                 .getReference(getString(R.string.firebase_user) + "/students");
@@ -67,7 +67,7 @@ public class StudentListActivity extends AppCompatActivity {
             @Override
             public void onDataChanged() {
                 super.onDataChanged();
-                progress_dialog.dismiss();
+                mProgressDialog.dismiss();
             }
 
             @Override

@@ -7,10 +7,10 @@
     tools:context="fr.wildcodeschool.checkpoint3firebase.MainActivity">
 
     <Button
-        android:id="@+id/gotoRegister"
+        android:id="@+id/goto_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/register_new" />
+        android:text="@string/register_new"/>
 
     <Button
         android:id="@+id/goto_studentlist"

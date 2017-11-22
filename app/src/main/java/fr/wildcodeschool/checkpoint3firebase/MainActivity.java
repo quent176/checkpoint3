@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button registerNouveau = findViewById(R.id.gotoRegister);
+        Button registerNouveau = findViewById(R.id.goto_register);
         registerNouveau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button student_list = findViewById(R.id.goto_studentlist);
-        student_list.setOnClickListener(new View.OnClickListener() {
+        Button studentList = findViewById(R.id.goto_studentlist);
+        studentList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, StudentListActivity.class);
